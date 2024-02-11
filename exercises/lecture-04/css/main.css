@@ -1,0 +1,58 @@
+h1,
+h2,
+h3 {
+    color: gray;
+}
+
+#main {
+    color: #e60202;
+}
+
+.h2 {
+    color: red;
+}
+
+.heading {
+    color: green;
+}
+
+ul>li {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+section>p {
+    color: red;
+}
+
+section p {
+    font-size: larger;
+}
+
+h2:first-of-type+h2 {
+    color: indigo;
+}
+
+p.first a {
+    color: green;
+}
+
+p .first a {
+    color: green;
+}
+
+div~p {
+    color: salmon;
+}
+
+.translucent-box {
+    background-color: hsl(0, 100%, 50%);
+}
+
+body {
+    font-size: 140%;
+}
+
+h1 {
+    font-size: 240;
+}
