@@ -5,3 +5,18 @@
   }
 footer {--footer-text-color: #fff;
 --fuuter-bg-color: #000;}
+html {
+  --primary-text-color: #000;
+  --primary-bg-color: #fff;
+}
+footer {
+  --footer-text-color: #fff;
+  --fuuter-bg-color: #000;
+}
+:root {
+  --primary-font-family: 'Roboto', sans-serif;
+  --primerry-font-size: 0.875rem;
+}
+a {
+  text-decoration: none;
+}
