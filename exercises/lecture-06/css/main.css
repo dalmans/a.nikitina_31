@@ -1,3 +1,4 @@
+@import url(common.css);
 a {
     color: indigo;
 }
@@ -30,14 +31,15 @@ ul :first-of-type {
     color: orange;
     }
 
-/*
-li span:first-child {
+
+li:first-child {
     color: orange;
 }
-*/
-li span:last-child {
+
+li:first-of-type + li {
     color: orange;
-}
+    }
+
 
 li:last-child {
     color: orange;
@@ -53,10 +55,10 @@ li {
 }
 
 
-li:not(.first-item):not(:last-child) {
-    color: inherit;
-    background-color: inherit;
-}
+li:not(.first-item):not(:last-of-type) {
+    background: yellow;
+    color: black;
+    }
 
 ol :nth-child(2) {
     color: orange;
