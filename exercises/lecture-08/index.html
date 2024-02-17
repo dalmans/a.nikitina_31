@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Перепишіть властивості padding та margin за допомогою скороченого синтаксу 
+    <style>
+        .box{ 
+            padding-top:    10px; 
+            padding-right:  20px; 
+            padding-bottom: 25px; 
+            padding-left:   20px;  
+    
+            margin-top:    25px; 
+            margin-right:  20px; 
+            margin-bottom: 25px; 
+            margin-left:   20px;  
+    
+        }
+        </style>
+
+        -->
+    <style>
+        .box {
+            padding: 10px 20px 25px 20px;
+            margin: 25px 20px 25px 20px;
+
+        }
+
+        /*
+        2. Обчислити ширину елемента .box
+         Ширина елементу 324px */
+        .box {
+            width: 300px;
+            padding: 10px;
+            border: dashed 2px green;
+
+        }
+
+
+        /*  3. Обчислити ширину і висоту елемента .first-box
+        
+        Ширина 256px;
+        Висота 156px;
+        
+        */
+        .first-box {
+            width: 200px;
+            height: 100px;
+            border: 8px solid blue;
+            padding: 20px;
+            background: yellow;
+
+        }
+
+
+        /*   4. Обчислити ширину і висоту елемента .second-box
+         Ширина 216px;
+         Висота 116px;
+        */
+        .second-box {
+            width: 200px;
+            height: 100px;
+            border: 8px solid blue;
+            background: yellow;
+        }
+
+        /* 
+        5. Обчислити ширину елемента div
+         Ширина 256px;
+       */
+
+        div {
+            box-sizing: content-box;
+            width: 200px;
+            border: 8px solid blue;
+            padding: 20px;
+            background: yellow;
+        }
+
+        /* 6. Обчислити ширину контенту елемента div
+        Ширина контенту елемента div становить 144px.
+        */
+        div {
+            box-sizing: border-box;
+            width: 200px;
+            border: 8px solid blue;
+            padding: 20px;
+            background: yellow;
+        }
+
+
+
+        div {
+            border: 10px dotted black;
+            padding: 15px;
+            background: lightblue;
+        }
+
+        /* 7. Для кожного з example1б example2, example3 встановити властивість background-clip згідно з правилами,
+        визначеними у відповідному параграфі*/
+
+        #example1 {
+            background-clip: border-box;
+        }
+
+        #example2 {
+            background-clip: padding-box
+        }
+
+        #example3 {
+            background-clip: content-box;
+        }
+
+        /* 8. Є заголовок з властивістю display: inline-block, який потрібно розбити на два рядки. Його ширина має бути динамічною.*/
+
+        h1 {
+            display: inline-block;
+
+        }
+
+        h1 span {
+            display: inline-block;
+            width: 100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="box"></div>
+    <br>
+    <div class="first-box"></div>
+    <br>
+    <div class="second-box"></div>
+    <br>
+
+    <div id="example1">
+        <p>Правило для example1: фон всередині елемента має простягатися за межі рамки.</p>
+    </div>
+    <br>
+    <div id="example2">
+        <p>Правило для example2: фон всередині елемента має простягатися до внутрішнього краю рамки.</p>
+    </div>
+    <br>
+    <div id="example3">
+        <p>Правило для example3: фон всередині елемента має простягатися до краю поля вмісту.</p>
+    </div>
+
+    <h1><span>Awesome article </span></h1>
+</body>
+
+</html>
