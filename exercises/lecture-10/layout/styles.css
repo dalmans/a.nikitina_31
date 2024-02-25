@@ -1,0 +1,14 @@
+body {
+  --padding: 5vw;
+  --max-width: 180ch;
+}
+
+.flexbox {
+  --min: 30ch;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  min-width: var(--min);
+  gap: 1rem;
+}
