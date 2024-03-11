@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <h1>Hello, javascript!</h1>
+    <!-- 
+    В середині script визначте 2 змінні message1 зі значенням Hello та message2 зі значенням JavaScript.
+     Використовуючи ці змінні та alert, виконайте відображення рядка "Hello JavaScript!".-->
+
+    <script>
+        var message1 = "Hello";
+        var message2 = "JavaScript";
+        alert(message1 + " " + message2 + "!");
+
+
+    </script>
+
+    <!-- 
+    3.Напишіть програму, що запитує у користувача значення двох змінних x, y, та виводить їх суму -->
+    <script>
+        'use strict';
+        let x, y;
+        x = prompt("Введіть значення x");
+        y = prompt("Введіть значення y");
+        x = parseFloat(x);
+        y = parseFloat(y);
+        var summa = x + y;
+        alert(summa);
+
+    </script>
+
+    <!-- 
+    4. Виправити помилку у коді-->
+    <script>
+        'use strict';
+
+        let message = "hello";
+        message = 123456;
+        document.write(message);
+    </script>
+
+
+    <!--Виправити помилку у коді-->
+
+    <script>
+        'use strict';
+
+        // let a = 9007199254740991;
+        let a = BigInt(9007199254740991);
+        let b = 9007199254740991n;
+        console.log(a + b);
+        // Uncaught TypeError: can't convert BigInt to number
+    </script>
+
+    <!--
+    5. Перепишіть код так, щоб результат дорівнював 5-->
+    <script>
+        'use strict';
+
+        let apples = 2;
+        let oranges = 3;
+
+        //alert(apples + oranges);
+
+    </script>
+    <!-- 
+    6.Які кінцеві значення всіх змінних a, b, c і d після виконання наведеного нижче коду?-->
+    <script>
+        'use strict';
+
+        //let a = 1, b = 1;
+        let c = ++a; // c = 2
+        let d = b++; // d = 1
+
+
+    </script>
+    <!--
+    7.Які значення a1 і x1 після виконання наведеного нижче коду? -->
+
+    <script>
+        'use strict';
+
+        let a1 = 2;
+        let x1 = 1 + (a1 *= 2);
+        /* a1 буде дорівнювати 4, x1 дорівнюватиме 5  */
+
+    </script>
+
+    <!--
+    8. Які результати цих виразів?-->
+
+    <script>
+        'use strict';
+
+        "" + 1 + 0  //   дорівнює 10
+        "" - 1 + 0  // дорівнює -1
+        true + false // дорівнює 1
+        6 / "3" // дорівнює 2
+        "2" * "3" // дорівнює 6
+        4 + 5 + "px" // дорівнює 9px
+        "$" + 4 + 5 //дорівнює $45
+        "4" - 2  // дорівнює 2
+        "4px" - 2 // дорівнює NaN
+        "  -9  " + 5 // дорівнює -9 5
+        "  -9  " - 5  // -14
+        null + 1 // 1
+        undefined + 1  // NaN
+        NaN + 1  // Nan
+
+    </script>
+
+
+    <!-- 
+    9. Cкоротити цей код за допомогою операторів += і *=: -->
+    <script>
+        'use strict';
+
+        let n = 2;
+        //n = n + 5;
+        //n = n * 2;
+        n += 5;
+        n *= 5;
+    </script>
+
+    <!-- 
+    10. Перетворити змінні n1, n2, n3, n4 на числа  -->
+    <script>
+        let n1 = "   123   ";
+        let n2 = "123z";
+        let n3 = true;
+        let n4 = false;
+
+        n1 = parseInt(n1);
+        n2 = parseFloat(n2);
+        n3 = Number(n3);
+        n4 = Number(n4);
+
+        console.log(n1, n2, n3, n4);
+
+
+    </script>
+
+</body>
+
+</html>
