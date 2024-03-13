@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <!--
+        1. Визначити результат наступних логічних виразів:-->
+    <script>
+
+        let x = 3
+        let y = 4
+
+        x == 3    //true
+        x === "3" // false
+        x != 5      // true
+        x !== "5"  // true
+        x !== 3    // false
+        y > 5     // false
+        y >= 3    // true
+        y < 5     // true
+        y <= 2    //false
+        1 == true  // true
+        null == undefined // true
+        NaN == NaN  // false
+        console.log("Hi");
+
+    </script>
+
+
+    <!--
+        2. Визначити результат наступних логічних виразів:-->
+    <script>
+
+        let x2 = 3;
+        let y2 = 4;
+        let z2 = 5;
+        x2 ||= y2;     // 3
+        x2 || (y2 = z2);  // 3
+        x2 &&= y2;       // 4
+        x2 && (y2 = z2);  // 5
+        x2 ??= y2;       // 3
+        x2 ?? (y2 = z2);  // 3
+
+
+    </script>
+
+    <!--
+     3. Напишіть програму, що пропонує користувачеві вгадати якесь число, наприклад 3.
+        У разі успіху, потрібно вивести вітання користувачеві, наприклад - 'Congratulations, You did it!' 
+        Якщо число більше за 3, потрібно вивести повідомлення користувачеві, наприклад - 'The number is too long'
+        Якщо число менше за 3, потрібно вивести повідомлення користувачеві, наприклад - 'The number is short'-->
+    <script>
+        let k;
+        k = prompt("Guess the number");
+        k = parseFloat(k);
+        if (k == 3) {
+            alert("Congratulations, You did it!")
+        }
+        if (k > 3) {
+            alert("The number is too long")
+        }
+        if (k < 3) {
+            alert("The number is short")
+        }
+
+
+
+    </script>
+
+    <!--
+       4. Напишіть програму, що пропонує користувачеві ввести назву дня тижня, наприклад - Понеділок.
+        Якщо користувач ввів Понеділок або Monday, вивести повідомлення "Start of the work week!" 
+        Якщо користувач ввів П'ятниця або Friday, вивести повідомлення "End of the work week!"
+        В інших випадках вивести повідомлення "A regular day"
+    -->
+    <!--Напишіть версію програми, застосовуючи оператор if else
+-->
+
+    <script>
+        let day1;
+        day1 = prompt("Enter a day of a week:");
+
+        if (day1 == "Monday") {
+            alert("Start of the work week!");
+        }
+        else if (day1 == "Friday") {
+            alert("End of the work week!");
+        }
+        else {
+            alert("A regular day");
+        }
+
+
+    </script>
+
+    <!--Напишіть версію програми, застосовуючи оператор switch-->
+    <script>
+        let day;
+        day = prompt("Enter a day of a week:");
+
+        switch (day) {
+            case "Monday":
+                alert("Start of the work week!");
+                break;
+            case "Понеділок":
+                alert("Start of the work week!");
+                break;
+            case "Friday":
+                alert("End of the work week!");
+                break;
+            case "П'ятниця":
+                alert("End of the work week!");
+                break;
+            default:
+                alert("A regular day");
+        }
+
+    </script>
+    <!--
+    5.За результатами іспиту студент набирає певну кількість балів,
+    що зберігається в змінній score. Напишіть програму,
+    що аналізує значення score та призначає студенту ступінь grade за таким алгоритмом:
+
+    Якщо студент набрав менше 50 балів, призначити йому ступінь 'F'
+    Якщо студент набрав менше 70 балів, призначити йому ступінь 'D'
+    Якщо студент набрав менше 80 балів, призначити йому ступінь 'C'
+    Якщо студент набрав менше 90 балів, призначити йому ступінь 'B'
+    В іншому випадку призначити йому ступінь 'A'
+-->
+    <!--Напишіть версію програми, застосовуючи оператор if else-->
+    <script>
+
+        let score;
+        let grade;
+        score = 91;
+
+        if (score < 50) {
+            grade = "F";
+        } else if (score < 70 && score >= 50) {
+            grade = "D";
+        }
+        else if (score < 80) {
+            grade = "C";
+        }
+        else if (score < 90) {
+            grade = "B";
+        } else { grade = "A"; }
+
+        console.log(grade);
+    </script>
+
+    <!--Напишіть версію програми, застосовуючи тернарний оператор:-->
+    <script>
+        let score1 = 91;
+        let grade1 = score1 < 50 ? 'F' :
+            score1 < 70 ? 'D' :
+                score1 < 80 ? 'C' :
+                    score1 < 90 ? 'B' :
+                        'A';
+
+        console.log(grade1);
+    </script>
+
+    <!--
+    6.Виправити помилку у наступному коді: -->
+    <script>
+        let firstName = null;
+        let lastName = undefined;
+        let username = firstName ?? lastName ?? "Guest";
+
+        console.log(username); // "Guest"
+    </script>
+</body>
+
+</html>
