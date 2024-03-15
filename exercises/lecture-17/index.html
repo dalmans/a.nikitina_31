@@ -45,8 +45,8 @@
         x2 || (y2 = z2);  // 3
         x2 &&= y2;       // 4
         x2 && (y2 = z2);  // 5
-        x2 ??= y2;       // 3
-        x2 ?? (y2 = z2);  // 3
+        x2 ??= y2;       // 4
+        x2 ?? (y2 = z2);  // 4
 
 
     </script>
@@ -173,7 +173,7 @@
     <script>
         let firstName = null;
         let lastName = undefined;
-        let username = firstName ?? lastName ?? "Guest";
+        let username = (firstName || lastName) ?? "Guest";
 
         console.log(username); // "Guest"
     </script>
