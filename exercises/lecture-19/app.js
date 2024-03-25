@@ -6,6 +6,7 @@ let str2 = "I'm a string!";
 /*
 Так, рядки мають однакову довжину*/
 
+
 let str1 = 'I\'m a string!';
 let str2 = "I'm a string!";
 if (str1 === str2) {
@@ -20,13 +21,16 @@ if (str1 == str2) {
 }
 console.log(str1.length);
 console.log(str2.length);
-
+console.log(str1.length == str2.length);
 /*
 2. Повернути перший символ рядка string5. Виконайте завдання, використовуючи індекс та метод charAt.
 let string5 = 'Hello World';*/
 let string5 = 'Hello World';
 let string5FirstSymbol = string5.charAt(0);
+let first1 = string5[0]
 console.log(string5FirstSymbol);
+console.log("перший символ рядка string5 - "+first1);
+
 
 /*
 3. повернути символ J рядка str3:
@@ -35,6 +39,8 @@ let str3 = "Hello Javascript";
 let pattern = /J/;
 str3.match(pattern);
 console.log(str3.match(pattern));
+// або:
+console.log(str3[6]);
 
 /*
 4. Використовуючи індекс, отримати доступ до останнього символу рядка двома способами*/
@@ -59,6 +65,7 @@ function lastChar1(text) {
 function lastChar2(text) {
 
     return (str3.match(/.$/)[0]);
+    return matchResult ? matchResult[0] : null;
 }
 
 console.log(lastChar(str3));
@@ -118,6 +125,12 @@ greeting();
 let c = `<div><h1>${greeting()}</h1></div>`;
 let textObj = document.querySelector('.hello');
 textObj.innerHTML = c;
+
+//Простіший варіант:
+let template = ("" +""+greeting (firstName, lastName)+" " + " ");
+    console.log(template);
+
+
 /*
 11. Маємо наступний код:
 let string1 = "  The name of our game  ";
