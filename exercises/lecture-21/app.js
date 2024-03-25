@@ -103,11 +103,7 @@ console.clear();
 
 const names4 = ['Batman', 'Catwoman', 'Joker', 'Bane'];
 
-for (let i = 0; i < names4.length; i++) {
-    if (names4[i] === 'Catwoman' || names4[i] === 'Joker') {
-        names4[i] = 'Alfred';
-    }
-}
+names4.splice(1, 2, 'Alfred');
 
 console.log(names4);
 
