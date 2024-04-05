@@ -31,19 +31,7 @@ calculate(operation, initialValue, numbers) приймає перший аргу
 function calculate(operation, initialValue, numbers) {
 
     for (let i = 0; i < numbers.length; i++) {
-
-        switch (operation) {
-            case sum:
-                // console.log('sum');
-                initialValue = sum(initialValue, numbers[i]);
-
-                break;
-            case multiply:
-                // console.log('multiply');
-                initialValue = multiply(initialValue, numbers[i]);
-                multiply(initialValue, numbers[i]);
-                break;
-        }
+        initialValue = operation(initialValue, numbers[i]);
     }
     console.log(initialValue);
     return initialValue;
